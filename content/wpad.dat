@@ -1,0 +1,5 @@
+function FindProxyForURL(url, host) {
+	if (shExpMatch(url,"http://foo.com/*")) {return "PROXY fooproxy:8080";}
+	if (shExpMatch(url,"http://bar.com/*")) {return "PROXY barproxy:8080";}
+	return "DIRECT";
+}

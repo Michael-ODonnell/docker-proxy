@@ -1,0 +1,9 @@
+function FindProxyForURL(url, host) {
+
+	if (shExpMatch(url,"http://cdn1.eegeo.com/*")) {return "DIRECT";}
+	if (shExpMatch(url,"https://cdn-resources.wrld3d.com/*")) {return "DIRECT";}
+	if (shExpMatch(url,"https://indoor-maps-api.eegeo.com/*")) {return "PROXY 192.168.1.10:8080; PROXY proxy:8080; DIRECT";}
+	if (shExpMatch(url,"https://apikey.eegeo.com*")) {return "PROXY 192.168.1.10:8080; PROXY proxy:8080; DIRECT";}
+	
+	return "DIRECT";
+}

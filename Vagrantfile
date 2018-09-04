@@ -11,7 +11,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   end
 
   config.vm.synced_folder ".", "/vagrant", type: "rsync", rsync__exclude: ".git/"
-  config.vm.network "private_network", ip: "192.168.1.100"
+  config.vm.network "private_network", ip: "192.168.1.10"
   
   config.vm.provider "virtualbox" do |vb|
     vb.name = 'docker-proxy'
